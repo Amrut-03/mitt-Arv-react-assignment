@@ -25,3 +25,6 @@ npm start  # or flutter run
 ```
 
 ## Demo Video
+
+https://github.com/user-attachments/assets/e55246d9-b752-4101-94e5-cbfcc9d03572
+
