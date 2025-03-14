@@ -1,26 +1,14 @@
 # React Assignment
 
 ## Description
-A brief description of the project, its purpose, and key features.
+This project is a Kanban board for task management, built using React 18.3.1 with TypeScript. It utilizes Redux Toolkit for state management and Material-UI for a modern UI experience. The application allows users to manage tasks across different stages, with features like task creation, updating, and column management.
 
 ## Installation
-
-### Prerequisites
-- List any dependencies or software needed before installation.
-
-### Steps
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/project-name.git
-
-# Navigate to the project directory
-cd project-name
-
-# Install dependencies
-npm install  # or flutter pub get (if it's a Flutter project)
-
-# Run the project
-npm start  # or flutter run
+git clone https://github.com/your-repo/kanban-board.git
+cd kanban-board
+npm install
+npm start
 ```
 
 ## Demo Video
