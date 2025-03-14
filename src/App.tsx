@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { TextField } from '@mui/material';
+import Board from './components/Board';
 import './App.css';
+import { useDispatch } from 'react-redux';
+import { setSearchQuery } from './redux/taskSlice';
 
 function App() {
+  const [searchQuery, setSearchQueryState] = useState('');
+  const dispatch = useDispatch();
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const query = e.target.value;
+    setSearchQueryState(query);
+    dispatch(setSearchQuery(query));
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="search-bar">
+        <TextField
+          label="Search tasks..."
+          variant="outlined"
+          fullWidth
+          value={searchQuery}
+          onChange={handleSearchChange}
+          placeholder="Search by task title..."
+          size="small"
+          sx={{
+            '& .MuiOutlinedInput-root': {
+              borderRadius: 8,
+            },
+          }}
+        />
+      </div>
+      <Board />
     </div>
   );
 }
