@@ -1,5 +1,4 @@
-# Project Title
-React Assignment
+# React Assignment
 
 ## Description
 A brief description of the project, its purpose, and key features.
